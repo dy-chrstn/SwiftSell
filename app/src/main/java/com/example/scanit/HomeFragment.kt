@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentTransaction
 
 
 class HomeFragment : Fragment() {
@@ -20,7 +22,17 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val v = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val bt = v.findViewById<CardView>(R.id.food_cv)
+        bt.setOnClickListener {
+            val productListFragment = ProductListFragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.frame_layout, productListFragment)
+            transaction.commit()
+        }
+
+        return v
     }
 
 

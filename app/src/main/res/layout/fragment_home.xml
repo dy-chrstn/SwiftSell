@@ -142,6 +142,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="310dp"
+                android:id="@+id/food_cv"
                 android:clickable="true"
                 android:layout_height="70dp"
                 android:backgroundTint="@color/light_yellow"
@@ -181,6 +182,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="310dp"
                 android:layout_height="70dp"
+                android:id="@+id/beverages_cv"
                 android:clickable="true"
                 android:focusable="true"
                 android:backgroundTint="@color/yellow"
@@ -221,6 +223,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="310dp"
                 android:layout_height="70dp"
+                android:id="@+id/clothing_cv"
                 android:clickable="true"
                 android:focusable="true"
                 android:backgroundTint="@color/light_yellow"
@@ -263,6 +266,7 @@
                 android:layout_height="70dp"
                 android:clickable="true"
                 android:focusable="true"
+                android:id="@+id/supplies_cv"
                 android:backgroundTint="@color/yellow"
                 android:layout_marginBottom="15dp">
                 <LinearLayout
